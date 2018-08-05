@@ -11,7 +11,7 @@
 <link href="/resources/css/common.css" type="text/css" rel="stylesheet"/>
 <script type="text/javascript" src="/resources/js/jquery-1.11.3.min.js"></script>
 
-<title>title</title>
+<title>welcome</title>
 
 <script>
 $(function(){
@@ -22,8 +22,11 @@ $(function(){
 </script>
 </head>
 <body>
+	<div>
+		<a href="/">TOP</a>
+	</div>
 	<div class="center">
-		<img alt="welcome" src="/resources/images/welcome.jpg"><br>
+		<img alt="welcome" src="/resources/images/disp/welcome.jpg"><br>
 		welcome:<c:out value="${ loginName}"/><br>
 		<input type="button" value="click me" id="btn">
 	</div>

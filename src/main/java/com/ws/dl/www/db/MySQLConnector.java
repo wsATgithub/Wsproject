@@ -11,10 +11,10 @@ import com.ws.dl.www.utils.PropertyUtil;
 public class MySQLConnector {
 
 	public static String getName(String id) {
-		String driverClassName = PropertyUtil.getValue("jdbc.driverClassName");
-		String url = PropertyUtil.getValue("jdbc.url");
-		String username = PropertyUtil.getValue("jdbc.username");
-		String password = PropertyUtil.getValue("jdbc.password");
+		String driverClassName = PropertyUtil.getJdbc("jdbc.driverClassName");
+		String url = PropertyUtil.getJdbc("jdbc.url");
+		String username = PropertyUtil.getJdbc("jdbc.username");
+		String password = PropertyUtil.getJdbc("jdbc.password");
 
 		Connection conn = null;
 
