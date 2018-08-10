@@ -18,10 +18,12 @@ public class FileUpController {
 	@RequestMapping(value = "/fileup", method = RequestMethod.POST)
 	public String fileup(@RequestParam("fileup") MultipartFile file) {
 
-        String path = PropertyUtil.getApp("www.file.path") + file.getOriginalFilename();
-        try {
-        	file.transferTo(new File(path));
-		} catch (IllegalStateException | IOException e) {
+		String path = PropertyUtil.getApp("www.file.path") + file.getOriginalFilename();
+		try {
+			file.transferTo(new File(path));
+		} catch (IllegalStateException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 

@@ -18,10 +18,12 @@ public class ImageUpController {
 	@RequestMapping(value = "/imageup", method = RequestMethod.POST)
 	public String imageup(@RequestParam("imageup") MultipartFile image) {
 
-        String path = PropertyUtil.getApp("www.image.path") + image.getOriginalFilename();
-        try {
+		String path = PropertyUtil.getApp("www.image.path") + image.getOriginalFilename();
+		try {
 			image.transferTo(new File(path));
-		} catch (IllegalStateException | IOException e) {
+		} catch (IllegalStateException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 

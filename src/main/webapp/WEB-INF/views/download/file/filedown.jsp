@@ -1,15 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE HTML>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link href="/resources/css/common.css" type="text/css" rel="stylesheet"/>
-<title>filedown</title>
-</head>
-<body>
-	<div>
-		<a href="/">TOP</a>
-	</div>
-</body>
-</html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<div>
+	<a href="/">TOP</a>
+</div>
+<div>
+	<c:forEach var="item" items="${fileList}">
+		<a href="/download/filedown?filename=${item}">${item}</a>
+		<br>
+	</c:forEach>
+</div>

@@ -10,19 +10,19 @@ public class PropertyUtil {
 		Properties properties = new Properties();
 
 		try {
-			properties.load(PropertyUtil.class.getResourceAsStream("/conf/jdbc.properties"));
+			properties.load(PropertyUtil.class.getResourceAsStream("/property/jdbc.properties"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		return properties.getProperty(key);
 	}
 
-	public static String getApp (String key) {
+	public static String getApp(String key) {
 
 		Properties properties = new Properties();
 
 		try {
-			properties.load(PropertyUtil.class.getResourceAsStream("/conf/app.properties"));
+			properties.load(PropertyUtil.class.getResourceAsStream("/property/app.properties"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
