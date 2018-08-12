@@ -24,4 +24,14 @@ public class GetUserServiceImpl implements GetUserService {
 		}
 		return entity.getName();
 	}
+
+	public int updateUser(String id) {
+		LoginCondition condition = new LoginCondition();
+		condition.setId(id);
+		condition.setName("更新名称１");
+
+		int cnt = mapper.updateUser(condition);
+
+		return cnt;
+	}
 }

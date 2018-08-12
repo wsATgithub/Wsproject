@@ -25,6 +25,7 @@ public class WelcomeController {
 	public String welcome(LoginForm form, Model model) {
 
 		String name = service.getUser(form.getId());
+		service.updateUser(form.getId());
 		model.addAttribute("loginName", name);
 
 		return "list/welcome";

@@ -6,4 +6,6 @@ import com.ws.dl.www.sql.entity.LoginEntity;
 public interface LoginMapper {
 
 	LoginEntity getUser(LoginCondition condition);
+
+	int updateUser(LoginCondition condition);
 }

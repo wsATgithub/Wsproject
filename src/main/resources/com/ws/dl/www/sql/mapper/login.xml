@@ -8,4 +8,11 @@
         FROM my_login
         WHERE id = #{id,jdbcType=VARCHAR}
     </select>
+
+    <update id="updateUser" parameterType="com.ws.dl.www.sql.condition.LoginCondition" >
+        UPDATE my_login
+        SET name = #{name,jdbcType=VARCHAR}
+        WHERE id = #{id,jdbcType=VARCHAR}
+    </update>
+
 </mapper>
